@@ -51,7 +51,7 @@ Price: 480.0"""
     def test_get_price_raises_attribute_error_without_bun(self, burger):
         with pytest.raises(AttributeError):
             burger.get_price()
-   # Проверяем, печать чека без булки вызовет ошибку
+   # Проверяем, что печать чека без булки вызовет ошибку
     def test_get_receipt_raises_attribute_error_without_bun(self, burger):
         with pytest.raises(AttributeError):
             burger.get_receipt()
