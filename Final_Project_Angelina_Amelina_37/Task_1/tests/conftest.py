@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import Mock
 from burger import Burger
+from database import Database
 
 @pytest.fixture
 def burger():
@@ -26,3 +27,7 @@ def full_burger(burger, mock_bun, mock_ingredient):
     burger.set_buns(mock_bun)
     burger.add_ingredient(mock_ingredient)
     return burger
+
+@pytest.fixture
+def db():
+    return Database()
